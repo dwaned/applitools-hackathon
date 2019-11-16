@@ -10,6 +10,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@master
+        
       - name: Cache
         uses: actions/cache@v1.0.0
         with:
@@ -17,7 +18,11 @@ jobs:
           key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
           restore-keys: |
             ${{ runner.os }}-maven-  
+            
+      - name: Deploy container with chrome
+        run: docker-compose -f docker-compose.selenium.yml up -d --build
+              
       - name: execute tests
-        run: mvn compile test "-Dcucumber.options=--tags @Applitools" -DAppliToolsBatchInfo=test
+        run: mvn compile test "-Dcucumber.options=--tags @Applitools" -DAppliToolsBatchInfo=test -DIsRemoteInstance=true
       
 

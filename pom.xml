@@ -28,8 +28,9 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>${maven.compiler.source}</maven.compiler.target>
         <maven.resources.plugin.version>3.1.0</maven.resources.plugin.version>
+        <eyes-selenium-java3.version>RELEASE</eyes-selenium-java3.version>
+        <junit.version>4.13-beta-2</junit.version>
     </properties>
-
 
 
     <build>
@@ -181,7 +182,22 @@
         <dependency>
             <groupId>io.dtective</groupId>
             <artifactId>dtective-core</artifactId>
-            <version>${dtective.version}</version>
+            <systemPath>${basedir}/library/dtective-core-1.0.1-jar-with-dependencies.jar</systemPath>
+            <scope>system</scope>
+            <version>1.0.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.applitools</groupId>
+            <artifactId>eyes-selenium-java3</artifactId>
+            <version>${eyes-selenium-java3.version}</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/junit/junit -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
         </dependency>
 
     </dependencies>

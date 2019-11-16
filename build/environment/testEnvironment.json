@@ -1,19 +1,13 @@
 {
-  "local-dev": {
-    "unitTestSite": "http://localhost:8088",
-    "TestApi": "http://localhost:8088/api"
+  "env-v1": {
+    "demoUrl": "https://demo.applitools.com/hackathon.html"
   },
-  "env-local": {
-    "unitTestSite": "http://localhost:8088",
-    "TestApi": "http://localhost:8088/api"
+  "env-v2": {
+    "demoUrl": "https://demo.applitools.com/hackathonV2.html"
   },
-  "env-docker-local": {
-    "unitTestSite": "http://examplesite",
-    "TestApi": "http://examplesite/api"
-  },
-  "env-CI": {
-    "TestApi": "http://my-ci-server/api",
-    "unitTestSite": "http://mysite"
+  "env-demo": {
+    "v1Url": "https://demo.applitools.com/hackathon.html",
+    "v2Url": "https://demo.applitools.com/hackathonV2.html"
   }
 }
 

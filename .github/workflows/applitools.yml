@@ -12,5 +12,6 @@ jobs:
       - uses: actions/checkout@master
       - name: GitHub Action for Maven & JDK 11
       - uses: xlui/action-maven-cli@v1.0
-      - run: mvn compile test "-Dcucumber.options=--tags @Applitools" -DAppliToolsBatchInfo=test
+      - name: Run tests against Applitools
+        run: mvn compile test "-Dcucumber.options=--tags @Applitools" -DAppliToolsBatchInfo=test
 

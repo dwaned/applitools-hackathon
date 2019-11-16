@@ -5,7 +5,7 @@ on: [push]
 jobs:
   build:
     name: Run tests against Applitools
-    runs-on: [macOS-latest]
+    runs-on: [linux]
 
     steps:
       - name: Checkout

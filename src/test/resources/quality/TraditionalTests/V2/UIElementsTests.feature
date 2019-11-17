@@ -11,19 +11,19 @@ Feature: UI Elements Tests V2
     Then element is displayed by Attribute "class" Value "logo-w"
 
     #Login Form header
-    And text "Login Form" is displayed in XPATH "//*[@class='auth-wrapper']//h4[@class='auth-header']"
-    And element is displayed by xpath "/html/body[@class='auth-wrapper']//h4[@class='auth-header']"
+    And text "Login Form" is displayed in XPATH "//h4[@class='auth-header']"
+    And element is displayed by xpath "//h4[@class='auth-header']"
 
-    #Username field related
+    #Username field
     And text "Username" is displayed in XPATH "//*[@class='auth-wrapper']//form//label[.='Username']"
     And element is displayed by xpath "//*[@class='auth-wrapper']//form//label[.='Username']"
-    And element is displayed by xpath "/html//input[@id='username']"
+    And element is displayed by xpath "//input[@id='username']"
     And element is displayed by xpath "//*[contains(@class,'os-icon-user-male-circle')]"
 
-    #Password field related
+    #Password field
     And text "Password" is displayed in XPATH "//*[@class='auth-wrapper']//form//label[.='Password']"
     And element is displayed by xpath "//*[@class='auth-wrapper']//form//label[.='Password']"
-    And element is displayed by xpath "/html//input[@id='password']"
+    And element is displayed by xpath "//input[@id='password']"
     And element is displayed by xpath "//*[contains(@class,'os-icon-fingerprint')]"
 
     #Login submit and remember me check
@@ -33,6 +33,6 @@ Feature: UI Elements Tests V2
     And I check that all buttons using XPATH: "//*[@type='checkbox']" are clickable
 
     #Social media footer
-    And element is displayed by xpath "//form/div[@class='buttons-w']//img[@src='img/social-icons/twitter.png']"
-    And element is displayed by xpath "//form/div[@class='buttons-w']//img[@src='img/social-icons/facebook.png']"
-    And element is displayed by xpath "//form/div[@class='buttons-w']//img[@src='img/social-icons/linkedin.png']"
+    And element is displayed by xpath "//img[@src='img/social-icons/twitter.png']"
+    And element is displayed by xpath "//img[@src='img/social-icons/facebook.png']"
+    And element is displayed by xpath "//img[@src='img/social-icons/linkedin.png']"

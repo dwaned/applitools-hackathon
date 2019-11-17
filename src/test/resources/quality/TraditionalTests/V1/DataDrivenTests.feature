@@ -1,7 +1,7 @@
 @TraditionalTest
 @DataDriven
 @V1
-Feature: Data Driven Tests for Login submission
+Feature: Data Driven Tests for Login submission V1
 
   Scenario Outline: Verify positive Login scenarios
     Given I open website "{v1Url}"

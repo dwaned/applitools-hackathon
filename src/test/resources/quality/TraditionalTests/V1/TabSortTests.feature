@@ -1,7 +1,7 @@
 @TraditionalTest
 @TabSort
 @V1
-Feature: Tab Sort Tests
+Feature: Tab Sort Tests V1
 
   Scenario: Verify that sorting by Amounts keeps data intact
     Given I open website "{v1Url}"

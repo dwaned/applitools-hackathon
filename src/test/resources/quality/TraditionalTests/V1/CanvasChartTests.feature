@@ -1,9 +1,8 @@
 @TraditionalTest
 @CanvasChart
 @V1
-Feature: Canvas Chart Tests
-  
-  
+Feature: Canvas Chart Tests V1
+
   Scenario: Verify that the chart data is correct before and after dataset is added
     Given I open website "{v1Url}"
     And I log in the ACME demo site

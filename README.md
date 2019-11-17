@@ -45,7 +45,7 @@ This framework provides some configuration options in which can be found in:
     - build/environment/environment.properties
     - build/environment/testEnvironment.json
 
-The main properties here are:
+The important properties for this challenge here are:
 
     - AppliToolsAPIKey - Containing the Applitools API key
     - AppliToolsBatchInfo - Setting the batch name
@@ -93,4 +93,9 @@ docker-compose -f docker-compose.selenium.yml up -d --build
 ```
 
 Then you need to set the property `IsRemoteInstance` to `true` either in the file `environment.properties`
- or within the command like execution using `-DIsRemoteInstance=true`. You can then use the same commands as the above. 
+ or within the command like execution using `-DIsRemoteInstance=true`. You can then use the same commands as the above.
+ 
+ ### Test Report
+ 
+ You can also view an Allure Report by running `mvn site` after a test run.
+  

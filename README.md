@@ -41,6 +41,7 @@ The definitions of custom steps can be found in:
 ## Configuration
 
 This framework provides some configuration options in which can be found in:
+    
     - build/environment/environment.properties
     - build/environment/testEnvironment.json
 
@@ -92,4 +93,4 @@ docker-compose -f docker-compose.selenium.yml up -d --build
 ```
 
 Then you need to set the property `IsRemoteInstance` to `true` either in the file `environment.properties`
- or within the command like execution using `-DIsRemoteInstance=true`
+ or within the command like execution using `-DIsRemoteInstance=true`. You can then use the same commands as the above. 

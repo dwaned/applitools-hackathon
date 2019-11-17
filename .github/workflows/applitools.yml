@@ -5,13 +5,24 @@ on: [push]
 jobs:
   build:
     name: Run tests against Applitools
-    runs-on: ubuntu-latest
+    runs-on: [ubuntu-latest]
 
     steps:
       - name: Checkout
         uses: actions/checkout@master
-      - name: GitHub Action for Maven & JDK 11
-        uses: xlui/action-maven-cli@v1.0
+        
+      - name: Cache
+        uses: actions/cache@v1.0.0
+        with:
+          path: ~/.m2/repository
+          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+          restore-keys: |
+            ${{ runner.os }}-maven-  
+            
+      - name: Deploy container with chrome
+        run: docker-compose -f docker-compose.selenium.yml up -d --build
+              
       - name: execute tests
-        run: mvn compile test "-Dcucumber.options=--tags @Applitools" -DAppliToolsBatchInfo=test
+        run: mvn compile test "-Dcucumber.options=--tags @Applitools" -DAppliToolsBatchInfo=test -DIsRemoteInstance=true
+      
 

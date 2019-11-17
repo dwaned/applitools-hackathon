@@ -10,4 +10,3 @@ Feature: Canvas Chart Tests V1
     Then the chart data should be correct
     And I click element with Attribute "id" and Value "addDataset"
     Then I check new dataset
-

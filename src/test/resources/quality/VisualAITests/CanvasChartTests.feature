@@ -13,4 +13,3 @@ Feature: Canvas Chart Tests
     And I click element with Attribute "id" and Value "addDataset"
     Then I check screenshot with applitools with tagname "CanvasChartTest"
     And I close AppliTools and handle results
-

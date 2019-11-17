@@ -110,5 +110,5 @@ Then you need to set the property `IsRemoteInstance` to `true` either in the fil
 
 ___
  
- Than you for organizing this Challenge!
+ Thank you for organizing this Challenge!
   

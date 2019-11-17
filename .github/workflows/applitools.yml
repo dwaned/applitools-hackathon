@@ -3,7 +3,32 @@ name: CI
 on: [push]
 
 jobs:
-  build:
+  traditionalV1:
+    name: Tradional tests against V1 site
+    runs-on: [ubuntu-latest]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
+        
+      - name: Cache
+        uses: actions/cache@v1.0.0
+        with:
+          path: ~/.m2/repository
+          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+          restore-keys: |
+            ${{ runner.os }}-maven-  
+            
+      - name: Deploy container with chrome
+        run: docker-compose -f docker-compose.selenium.yml up -d --build
+              
+      - name: execute tests
+        run: mvn compile test "-Dcucumber.options=--tags @V1" -DTestEnvironment=env-demo -DIsRemoteInstance=true
+      
+      - name: Create Allure Report
+        run: mvn site
+  
+  applitools:
     name: Run tests against Applitools
     runs-on: [ubuntu-latest]
 
@@ -23,6 +48,6 @@ jobs:
         run: docker-compose -f docker-compose.selenium.yml up -d --build
               
       - name: execute tests
-        run: mvn compile test "-Dcucumber.options=--tags @Applitools" -DAppliToolsBatchInfo=test -DIsRemoteInstance=true
+        run: mvn compile test "-Dcucumber.options=--tags @Applitools" -DAppliToolsBatchInfo=CI -DIsRemoteInstance=true
       
 

@@ -11,15 +11,18 @@ Feature: UI Elements Tests V2
     Then element is displayed by Attribute "class" Value "logo-w"
 
     #Login Form header
+    And text "Login Form" is displayed in XPATH "//*[@class='auth-wrapper']//h4[@class='auth-header']"
     And element is displayed by xpath "/html/body[@class='auth-wrapper']//h4[@class='auth-header']"
 
     #Username field related
-    And element is displayed by xpath "/html/body[@class='auth-wrapper']//form//label[.='Username']"
+    And text "Username" is displayed in XPATH "//*[@class='auth-wrapper']//form//label[.='Username']"
+    And element is displayed by xpath "//*[@class='auth-wrapper']//form//label[.='Username']"
     And element is displayed by xpath "/html//input[@id='username']"
     And element is displayed by xpath "//*[contains(@class,'os-icon-user-male-circle')]"
 
     #Password field related
-    And element is displayed by xpath "/html/body[@class='auth-wrapper']//form//label[.='Password']"
+    And text "Password" is displayed in XPATH "//*[@class='auth-wrapper']//form//label[.='Password']"
+    And element is displayed by xpath "//*[@class='auth-wrapper']//form//label[.='Password']"
     And element is displayed by xpath "/html//input[@id='password']"
     And element is displayed by xpath "//*[contains(@class,'os-icon-fingerprint')]"
 

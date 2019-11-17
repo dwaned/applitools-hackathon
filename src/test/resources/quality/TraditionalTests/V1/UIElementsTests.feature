@@ -11,7 +11,8 @@ Feature: UI Elements Tests
     Then element is displayed by Attribute "class" Value "logo-w"
 
     #Login Form header
-    And element is displayed by xpath "/html/body[@class='auth-wrapper']//h4[@class='auth-header']"
+    And element is displayed by xpath "//*[@class='auth-wrapper']//h4[@class='auth-header']"
+    And text "Login Form" is displayed in XPATH "//*[@class='auth-wrapper']//h4[@class='auth-header']"
 
     #Username field related
     And element is displayed by xpath "/html/body[@class='auth-wrapper']//form//label[.='Username']"

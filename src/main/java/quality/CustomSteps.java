@@ -94,6 +94,10 @@ public class CustomSteps {
 
     @Then("I check new dataset")
     public void iCheckNewDataset() {
+        /*
+        This is not possible since the data is not available from the script tag and is dynamically generated after
+        the call to Add dataset.
+         */
         throw new PendingException();
     }
 

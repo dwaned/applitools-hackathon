@@ -62,6 +62,18 @@ As with normal Maven projects, the above properties can be passed in command lin
 To be able to run locally, you will need to download chromedriver and place it in root of repository.
 You will also need to have Maven installed.
 
+*Make sure you set IsRemoteInstance to 'false' in the environment.properties*
+
+#### Remote run
+
+Using the available docker-compose file, this would be the quickest/easiest way to run:
+
+In terminal, execute:
+
+- docker-compose -f docker-compose.selenium.yml up -d 
+
+----
+
 To run the tests:
 
 ##### Traditional Tests V1

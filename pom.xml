@@ -28,7 +28,7 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>${maven.compiler.source}</maven.compiler.target>
         <maven.resources.plugin.version>3.1.0</maven.resources.plugin.version>
-        <eyes-selenium-java3.version>RELEASE</eyes-selenium-java3.version>
+        <eyes-selenium-java3.version>3.160.3</eyes-selenium-java3.version>
         <junit.version>4.13-beta-2</junit.version>
     </properties>
 

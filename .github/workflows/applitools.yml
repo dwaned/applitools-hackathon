@@ -23,7 +23,7 @@ jobs:
       - name: Deploy container with chrome
         run: docker-compose -f docker-compose.selenium.yml up -d --build
               
-      - name: execute tests
-        run: mvn compile test "-Dcucumber.options=--tags @Applitools" -DAppliToolsBatchInfo=CI -DTestEnvironment=env-v2 -DIsRemoteInstance=true
+#       - name: execute tests
+#         run: mvn compile test "-Dcucumber.options=--tags @Applitools" -DAppliToolsBatchInfo=CI -DTestEnvironment=env-v2 -DIsRemoteInstance=true
       
 

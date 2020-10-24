@@ -19,7 +19,7 @@
 
         <!--  Project Plugin Versions -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.surefire.plugin.version>3.0.0-M3</maven.surefire.plugin.version>
+        <maven.surefire.plugin.version>3.0.0-M4</maven.surefire.plugin.version>
         <allure.version>2.10.0</allure.version>
         <allure.maven.version>2.10.0</allure.maven.version>
         <allure.cucumber4.jvm.version>2.10.0</allure.cucumber4.jvm.version>
